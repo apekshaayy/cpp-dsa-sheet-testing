@@ -202,7 +202,7 @@ export default function SheetPage() {
         />
 
         {/* Test Notes Popup */}
-        <NotesPopup questionID="global-test" />
+        <NotesPopup questionID={question.id} />
 
       </main>
 
