@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import TestimonialPrompt from '@/components/TestimonialPrompt';
 import ReportIssueButton from '@/components/ReportIssueButton';
 import ProgressSummary from '@/components/ProgressSummary';
+import NotesPopup from '@/components/NotesPopup';
 
 export default function SheetPage() {
   const [difficultyFilter, setDifficultyFilter] = useState('');
@@ -192,13 +193,17 @@ export default function SheetPage() {
 
         {/* SHEET CONTENT */}
         <SheetContent
-          difficultyFilter={difficultyFilter}
-          statusFilter={statusFilter}
-          revisionFilter={revisionFilter}
-          searchTerm={searchTerm}
-          platformFilter={platformFilter}
-          companyFilter={companyFilter}
+        difficultyFilter={difficultyFilter}
+        statusFilter={statusFilter}
+        revisionFilter={revisionFilter}
+        searchTerm={searchTerm}
+        platformFilter={platformFilter}
+        companyFilter={companyFilter}
         />
+
+        {/* Test Notes Popup */}
+        <NotesPopup questionID="global-test" />
+
       </main>
 
       <TestimonialPrompt />
